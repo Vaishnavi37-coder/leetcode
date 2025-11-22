@@ -1,0 +1,18 @@
+3110. Score of a String
+class Solution {
+    public int scoreOfString(String s) {
+      int ans=0;
+      for(int i=0;i<s.length()-1;i++){
+      //  int a=i;//0 h
+        //int b=i+1;//1 e
+        char frst=s.charAt(i);//charAt(0)=h
+        char second=s.charAt(i+1);///charAt(1)=e
+      //  int frstasci=frst;//h asci value
+        //int secondasci=second;//e ascii value
+        int temp=Math.abs(frst-second);//Math.abs which means convert negative to positive like in place of | | mod using Math.abs
+        ans=ans+temp;
+
+      }
+      return ans;
+    }
+}
